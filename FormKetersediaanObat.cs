@@ -16,5 +16,17 @@ namespace Apotek_PBO
         {
             InitializeComponent();
         }
+
+        private void btnObatMasuk_Click(object sender, EventArgs e)
+        {
+            FormObatMasuk form = new FormObatMasuk();
+            form.Show();
+        }
+
+        private void btnObatKeluar_Click(object sender, EventArgs e)
+        {
+            FormObatKeluar form1 = new FormObatKeluar();
+            form1.Show();
+        }
     }
 }

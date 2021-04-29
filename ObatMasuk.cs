@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Apotek_PBO
 {
-    class ObatMasuk
+    class ObatMasuk : KetersediaanObat
     {
         private int _masukID;
         private string _masukNama;
@@ -45,7 +45,7 @@ namespace Apotek_PBO
             set { _masukPabrik = value; }
         }
 
-        public void obatMasuk(string masukNama, int masukJumlah, string masukUkuran, string masukTanggal, string masukPabrik)
+        public void TambahObat(string masukNama, int masukJumlah, string masukUkuran, string masukTanggal, string masukPabrik)
         { 
             _masukID = 1;
             MasukNama = masukNama;

@@ -6,37 +6,42 @@ using System.Threading.Tasks;
 
 namespace Apotek_PBO
 {
-    class User
+    class UserPremium : User
     {
         private int _userID;
         private string _userName;
         private string _password;
 
-        public int UserID
+        public int newUserID
         {
             get { return _userID; }
         }
-        public string UserName
+        public string newUserName
         {
             get { return _userName; }
             set { _userName = value; }
         }
-        public string Password
+        public string newPassword
         {
             get { return _password; }
             set { _password = value; }
         }
-        public User() { }
-        public User(string userName, string password)
+        public UserPremium() { }
+        public UserPremium(string userName, string password)
         {
             UserName = userName;
             Password = password;
         }
-        public Boolean Login(string userName, string password)
+        public new Boolean Login(string userName, string password)
         {
-            if (userName == "User" & password == "User")
+            if(userName == "Admin1" & password == "Admin001")
             {
                 _userID = 1;
+                return true;
+            }
+            else if(userName == "Admin2" & password == "Admin002")
+            {
+                _userID = 2;
                 return true;
             }
             else
@@ -46,4 +51,3 @@ namespace Apotek_PBO
         }
     }
 }
-

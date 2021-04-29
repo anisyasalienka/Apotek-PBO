@@ -32,12 +32,18 @@ namespace Apotek_PBO
             get { return _readyUkuran; }
             set { _readyUkuran = value; }
         }
-
         public void TambahObat(string readyName, int readyJumlah, string readyUkuran )
         {
             _readyID = 1;
             ReadyName = readyName;
-            ReadyJumlah = readyJumlah;
+            ReadyJumlah += readyJumlah;
+            ReadyUkuran = readyUkuran;
+        }
+        public void KurangObat(string readyName, int readyJumlah, string readyUkuran)
+        {
+            _readyID = 1;
+            ReadyName = readyName;
+            ReadyJumlah -= readyJumlah;
             ReadyUkuran = readyUkuran;
         }
 

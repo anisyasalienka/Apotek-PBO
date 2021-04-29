@@ -24,7 +24,7 @@ namespace Apotek_PBO
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            User user = new User(tbUsername.Text,tbPassword.Text);
+            UserPremium user = new UserPremium(tbUsername.Text,tbPassword.Text);
 
             if(user.Login(user.UserName, user.Password))
             {
@@ -34,7 +34,17 @@ namespace Apotek_PBO
             }
             else
             {
-                MessageBox.Show("Login Gagal");
+                User user1 = new User(tbUsername.Text, tbPassword.Text);
+                if(user1.Login(user1.UserName, user1.Password))
+                {
+                    FormUser formUser = new FormUser();
+                    formUser.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Login Gagal");
+                }
             }
         }
     }

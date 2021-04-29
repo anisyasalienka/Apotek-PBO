@@ -32,6 +32,9 @@ namespace Apotek_PBO
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnObatMasuk = new System.Windows.Forms.Button();
             this.btnObatKeluar = new System.Windows.Forms.Button();
+            this.btnDataObatMasuk = new System.Windows.Forms.Button();
+            this.btnDataObatKeluar = new System.Windows.Forms.Button();
+            this.btnKetersediaanObat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,27 +49,59 @@ namespace Apotek_PBO
             // 
             // btnObatMasuk
             // 
-            this.btnObatMasuk.Location = new System.Drawing.Point(67, 394);
+            this.btnObatMasuk.Location = new System.Drawing.Point(67, 381);
             this.btnObatMasuk.Name = "btnObatMasuk";
-            this.btnObatMasuk.Size = new System.Drawing.Size(99, 31);
+            this.btnObatMasuk.Size = new System.Drawing.Size(99, 44);
             this.btnObatMasuk.TabIndex = 1;
             this.btnObatMasuk.Text = "Obat Masuk";
             this.btnObatMasuk.UseVisualStyleBackColor = true;
+            this.btnObatMasuk.Click += new System.EventHandler(this.btnObatMasuk_Click);
             // 
             // btnObatKeluar
             // 
-            this.btnObatKeluar.Location = new System.Drawing.Point(197, 394);
+            this.btnObatKeluar.Location = new System.Drawing.Point(183, 381);
             this.btnObatKeluar.Name = "btnObatKeluar";
-            this.btnObatKeluar.Size = new System.Drawing.Size(99, 31);
+            this.btnObatKeluar.Size = new System.Drawing.Size(99, 44);
             this.btnObatKeluar.TabIndex = 2;
             this.btnObatKeluar.Text = "Obat Keluar";
             this.btnObatKeluar.UseVisualStyleBackColor = true;
+            this.btnObatKeluar.Click += new System.EventHandler(this.btnObatKeluar_Click);
+            // 
+            // btnDataObatMasuk
+            // 
+            this.btnDataObatMasuk.Location = new System.Drawing.Point(297, 381);
+            this.btnDataObatMasuk.Name = "btnDataObatMasuk";
+            this.btnDataObatMasuk.Size = new System.Drawing.Size(99, 44);
+            this.btnDataObatMasuk.TabIndex = 3;
+            this.btnDataObatMasuk.Text = "Data Obat Masuk";
+            this.btnDataObatMasuk.UseVisualStyleBackColor = true;
+            // 
+            // btnDataObatKeluar
+            // 
+            this.btnDataObatKeluar.Location = new System.Drawing.Point(415, 381);
+            this.btnDataObatKeluar.Name = "btnDataObatKeluar";
+            this.btnDataObatKeluar.Size = new System.Drawing.Size(99, 44);
+            this.btnDataObatKeluar.TabIndex = 4;
+            this.btnDataObatKeluar.Text = "Data Obat Keluar";
+            this.btnDataObatKeluar.UseVisualStyleBackColor = true;
+            // 
+            // btnKetersediaanObat
+            // 
+            this.btnKetersediaanObat.Location = new System.Drawing.Point(530, 381);
+            this.btnKetersediaanObat.Name = "btnKetersediaanObat";
+            this.btnKetersediaanObat.Size = new System.Drawing.Size(99, 44);
+            this.btnKetersediaanObat.TabIndex = 5;
+            this.btnKetersediaanObat.Text = "Ketersediaan Obat";
+            this.btnKetersediaanObat.UseVisualStyleBackColor = true;
             // 
             // FormKetersediaanObat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnKetersediaanObat);
+            this.Controls.Add(this.btnDataObatKeluar);
+            this.Controls.Add(this.btnDataObatMasuk);
             this.Controls.Add(this.btnObatKeluar);
             this.Controls.Add(this.btnObatMasuk);
             this.Controls.Add(this.dataGridView1);
@@ -82,5 +117,8 @@ namespace Apotek_PBO
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnObatMasuk;
         private System.Windows.Forms.Button btnObatKeluar;
+        private System.Windows.Forms.Button btnDataObatMasuk;
+        private System.Windows.Forms.Button btnDataObatKeluar;
+        private System.Windows.Forms.Button btnKetersediaanObat;
     }
 }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Apotek_PBO
 {
-    class ObatKeluar
+    class ObatKeluar : KetersediaanObat
     {
         private int _keluarID;
         private string _keluarNama;
         private int _keluarJumlah;
         private string _keluarUkuran;
         private string _keluarTanggal;
-        private string _keluarPabrik;
+        private string _keluarCustomer;
 
         public int KeluarID
         {
@@ -39,20 +39,20 @@ namespace Apotek_PBO
             get { return _keluarTanggal; }
             set { _keluarTanggal = value; }
         }
-        public string KeluarPabrik
+        public string KeluarCustomer
         {
-            get { return _keluarPabrik; }
-            set { _keluarPabrik = value; }
+            get { return _keluarCustomer; }
+            set { _keluarCustomer = value; }
         }
 
-        public void obatKeluar(string keluarNama, int keluarJumlah, string keluarUkuran, string keluarTanggal, string keluarPabrik)
+        public void KurangObat(string keluarNama, int keluarJumlah, string keluarUkuran, string keluarTanggal, string keluarCustomer)
         {
             _keluarID = 1;
             KeluarNama = keluarNama;
             KeluarJumlah = keluarJumlah;
             KeluarUkuran = keluarUkuran;
             KeluarTanggal = keluarTanggal;
-            KeluarPabrik = keluarPabrik;
+            KeluarCustomer = keluarCustomer;
         }
     }
 }
