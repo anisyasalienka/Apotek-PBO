@@ -19,13 +19,38 @@ namespace Apotek_PBO
 
         private void btnKurang_Click(object sender, EventArgs e)
         {
-            ObatKeluar obatKeluar = new ObatKeluar();
-            obatKeluar.KeluarNama = tbNamaKeluar.Text;
-            obatKeluar.KeluarJumlah = int.Parse(tbJumlahKeluar.Text);
-            obatKeluar.KeluarUkuran = tbUkuranKeluar.Text;
-            obatKeluar.KeluarTanggal = dtTanggalKeluar.Text;
-            obatKeluar.KeluarCustomer = tbCustomer.Text;
-            obatKeluar.KurangObat(obatKeluar.KeluarNama, obatKeluar.KeluarJumlah, obatKeluar.KeluarUkuran, obatKeluar.KeluarTanggal, obatKeluar.KeluarCustomer);
+            DialogResult result = MessageBox.Show("Apakah anda yakin dengan data yang dimasukkan?","", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                ObatKeluarClass obatKeluar = new ObatKeluarClass();
+                obatKeluar.KeluarNama = tbNamaKeluar.Text.Trim();
+                obatKeluar.KeluarUkuran = tbUkuranKeluar.Text.Trim();
+                obatKeluar.KeluarTanggal = dtTanggalKeluar.Value;
+                obatKeluar.KeluarCustomer = tbCustomer.Text.Trim();
+                if (tbJumlahKeluar.Text == "")
+                {
+                    obatKeluar.KeluarJumlah = 0;
+                }
+                else
+                {
+                    obatKeluar.KeluarJumlah = int.Parse(tbJumlahKeluar.Text.Trim());
+                }
+                if (obatKeluar.KurangObat())
+                {
+                    MessageBox.Show("Berhasil Dikurangkan ! ");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Gagal dikurangkan ! ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Batal mengurangi data");
+            }
+            
+
         }
 
         private void btnTutup_Click(object sender, EventArgs e)

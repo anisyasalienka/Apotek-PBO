@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Apotek_PBO.Models;
 
 namespace Apotek_PBO
 {
     class UserPremium : User
     {
-        private int _userID;
+        LogIn model = new LogIn();
         private string _userName;
         private string _password;
 
-        public int newUserID
-        {
-            get { return _userID; }
-        }
         public string newUserName
         {
             get { return _userName; }
@@ -32,22 +29,42 @@ namespace Apotek_PBO
             UserName = userName;
             Password = password;
         }
-        public new Boolean Login(string userName, string password)
+        public new Boolean Login()
         {
-            if(userName == "Admin1" & password == "Admin001")
+            bool b = false;
+            using (var db =new DBMedStorageContext())
             {
-                _userID = 1;
-                return true;
+                var query = from LogIn in db.LogIns where LogIn.Username == UserName && LogIn.Password == Password select LogIn;
+                if (query != null)
+                {
+                    foreach (var item in query)
+                    {
+                        if (item.Type == "admin")
+                        {
+                            b = true;
+                        }
+                    }
+
+                }
             }
-            else if(userName == "Admin2" & password == "Admin002")
+            return b;
+        }
+        public new Boolean tambahAkun(string type)
+        {
+            bool b = false;
+            if (UserName != "" && Password != "")
             {
-                _userID = 2;
-                return true;
+                model.Username = UserName;
+                model.Password = Password;
+                model.Type = type;
+                using (var db = new DBMedStorageContext())
+                {
+                    db.LogIns.Add(model);
+                    db.SaveChanges();
+                    b = true;
+                }
             }
-            else
-            {
-                return false;
-            }
+            return b;
         }
     }
 }

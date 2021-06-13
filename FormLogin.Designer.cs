@@ -34,13 +34,17 @@ namespace Apotek_PBO
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnCLose = new System.Windows.Forms.Button();
+            this.btnTutupFormLogin = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSignin = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(257, 174);
+            this.lblUsername.BackColor = System.Drawing.SystemColors.Window;
+            this.lblUsername.Location = new System.Drawing.Point(230, 174);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(69, 15);
             this.lblUsername.TabIndex = 0;
@@ -49,7 +53,8 @@ namespace Apotek_PBO
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(257, 216);
+            this.lblPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.lblPassword.Location = new System.Drawing.Point(230, 216);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(66, 15);
             this.lblPassword.TabIndex = 1;
@@ -57,52 +62,82 @@ namespace Apotek_PBO
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(332, 171);
+            this.tbUsername.Location = new System.Drawing.Point(305, 171);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(173, 23);
             this.tbUsername.TabIndex = 2;
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(333, 213);
+            this.tbPassword.Location = new System.Drawing.Point(306, 213);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(173, 23);
             this.tbPassword.TabIndex = 3;
             this.tbPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(333, 266);
+            this.btnLogin.BackColor = System.Drawing.Color.White;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Location = new System.Drawing.Point(305, 266);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(75, 31);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // btnCLose
+            // btnTutupFormLogin
             // 
-            this.btnCLose.Location = new System.Drawing.Point(448, 266);
-            this.btnCLose.Name = "btnCLose";
-            this.btnCLose.Size = new System.Drawing.Size(75, 23);
-            this.btnCLose.TabIndex = 5;
-            this.btnCLose.Text = "Close";
-            this.btnCLose.UseVisualStyleBackColor = true;
-            this.btnCLose.Click += new System.EventHandler(this.btnCLose_Click);
+            this.btnTutupFormLogin.BackColor = System.Drawing.SystemColors.Window;
+            this.btnTutupFormLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutupFormLogin.Location = new System.Drawing.Point(403, 266);
+            this.btnTutupFormLogin.Name = "btnTutupFormLogin";
+            this.btnTutupFormLogin.Size = new System.Drawing.Size(75, 31);
+            this.btnTutupFormLogin.TabIndex = 5;
+            this.btnTutupFormLogin.Text = "Tutup";
+            this.btnTutupFormLogin.UseVisualStyleBackColor = false;
+            this.btnTutupFormLogin.Click += new System.EventHandler(this.btnTutupFormLogin_Click);
             // 
-            // Form1
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::Apotek_PBO.Properties.Resources.design_MedStorage_01;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnSignin);
+            this.panel1.Controls.Add(this.btnTutupFormLogin);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(789, 472);
+            this.panel1.TabIndex = 6;
+            // 
+            // btnSignin
+            // 
+            this.btnSignin.BackColor = System.Drawing.SystemColors.Window;
+            this.btnSignin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignin.Location = new System.Drawing.Point(305, 317);
+            this.btnSignin.Name = "btnSignin";
+            this.btnSignin.Size = new System.Drawing.Size(174, 31);
+            this.btnSignin.TabIndex = 6;
+            this.btnSignin.Text = "Signup";
+            this.btnSignin.UseVisualStyleBackColor = false;
+            this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
+            // 
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnCLose);
-            this.Controls.Add(this.btnLogin);
+            this.ClientSize = new System.Drawing.Size(789, 472);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.panel1);
+            this.Name = "FormLogin";
+            this.Text = "FormLogin";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,7 +150,9 @@ namespace Apotek_PBO
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnCLose;
+        private System.Windows.Forms.Button btnTutupFormLogin;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSignin;
     }
 }
 

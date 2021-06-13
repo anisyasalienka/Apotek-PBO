@@ -29,138 +29,173 @@ namespace Apotek_PBO
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblObatName = new System.Windows.Forms.Label();
-            this.lblObatKomposisi = new System.Windows.Forms.Label();
-            this.lblObatKegunaan = new System.Windows.Forms.Label();
-            this.lblObatJenis = new System.Windows.Forms.Label();
-            this.lblObatHarga = new System.Windows.Forms.Label();
-            this.rtbObatKomposisi = new System.Windows.Forms.RichTextBox();
-            this.tbObatName = new System.Windows.Forms.TextBox();
-            this.tbObatKegunaan = new System.Windows.Forms.TextBox();
-            this.tbObatHarga = new System.Windows.Forms.TextBox();
-            this.btnTambah = new System.Windows.Forms.Button();
-            this.cbObatJenis = new System.Windows.Forms.ComboBox();
+            this.lblNamaTambahInfoObat = new System.Windows.Forms.Label();
+            this.lblJenisTambahInfoObat = new System.Windows.Forms.Label();
+            this.lblKomposisiTambahInfoObat = new System.Windows.Forms.Label();
+            this.lblKegunaanTambahInfoObat = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbNamaTambahInfoObat = new System.Windows.Forms.TextBox();
+            this.rtbKomposisiTambahInfoObat = new System.Windows.Forms.RichTextBox();
+            this.rtbKegunaanTambahInfoObat = new System.Windows.Forms.RichTextBox();
+            this.tbUkuranTambahInfoObat = new System.Windows.Forms.TextBox();
+            this.tbHargaTambahInfoObat = new System.Windows.Forms.TextBox();
+            this.btnTambahTambahInfoObat = new System.Windows.Forms.Button();
+            this.btnBatalTambahInfoObat = new System.Windows.Forms.Button();
+            this.cbJenisTambahInfoObat = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // lblObatName
+            // lblNamaTambahInfoObat
             // 
-            this.lblObatName.AutoSize = true;
-            this.lblObatName.Location = new System.Drawing.Point(87, 90);
-            this.lblObatName.Name = "lblObatName";
-            this.lblObatName.Size = new System.Drawing.Size(51, 15);
-            this.lblObatName.TabIndex = 0;
-            this.lblObatName.Text = "Nama  : ";
+            this.lblNamaTambahInfoObat.AutoSize = true;
+            this.lblNamaTambahInfoObat.Location = new System.Drawing.Point(56, 29);
+            this.lblNamaTambahInfoObat.Name = "lblNamaTambahInfoObat";
+            this.lblNamaTambahInfoObat.Size = new System.Drawing.Size(45, 15);
+            this.lblNamaTambahInfoObat.TabIndex = 0;
+            this.lblNamaTambahInfoObat.Text = "Nama :";
             // 
-            // lblObatKomposisi
+            // lblJenisTambahInfoObat
             // 
-            this.lblObatKomposisi.AutoSize = true;
-            this.lblObatKomposisi.Location = new System.Drawing.Point(87, 178);
-            this.lblObatKomposisi.Name = "lblObatKomposisi";
-            this.lblObatKomposisi.Size = new System.Drawing.Size(68, 15);
-            this.lblObatKomposisi.TabIndex = 1;
-            this.lblObatKomposisi.Text = "Komposisi :";
+            this.lblJenisTambahInfoObat.AutoSize = true;
+            this.lblJenisTambahInfoObat.Location = new System.Drawing.Point(56, 75);
+            this.lblJenisTambahInfoObat.Name = "lblJenisTambahInfoObat";
+            this.lblJenisTambahInfoObat.Size = new System.Drawing.Size(38, 15);
+            this.lblJenisTambahInfoObat.TabIndex = 1;
+            this.lblJenisTambahInfoObat.Text = "Jenis :";
             // 
-            // lblObatKegunaan
+            // lblKomposisiTambahInfoObat
             // 
-            this.lblObatKegunaan.AutoSize = true;
-            this.lblObatKegunaan.Location = new System.Drawing.Point(87, 264);
-            this.lblObatKegunaan.Name = "lblObatKegunaan";
-            this.lblObatKegunaan.Size = new System.Drawing.Size(69, 15);
-            this.lblObatKegunaan.TabIndex = 2;
-            this.lblObatKegunaan.Text = "Kegunaan : ";
+            this.lblKomposisiTambahInfoObat.AutoSize = true;
+            this.lblKomposisiTambahInfoObat.Location = new System.Drawing.Point(56, 118);
+            this.lblKomposisiTambahInfoObat.Name = "lblKomposisiTambahInfoObat";
+            this.lblKomposisiTambahInfoObat.Size = new System.Drawing.Size(62, 15);
+            this.lblKomposisiTambahInfoObat.TabIndex = 2;
+            this.lblKomposisiTambahInfoObat.Text = "Komposisi";
             // 
-            // lblObatJenis
+            // lblKegunaanTambahInfoObat
             // 
-            this.lblObatJenis.AutoSize = true;
-            this.lblObatJenis.Location = new System.Drawing.Point(87, 135);
-            this.lblObatJenis.Name = "lblObatJenis";
-            this.lblObatJenis.Size = new System.Drawing.Size(41, 15);
-            this.lblObatJenis.TabIndex = 3;
-            this.lblObatJenis.Text = "Jenis : ";
+            this.lblKegunaanTambahInfoObat.AutoSize = true;
+            this.lblKegunaanTambahInfoObat.Location = new System.Drawing.Point(56, 212);
+            this.lblKegunaanTambahInfoObat.Name = "lblKegunaanTambahInfoObat";
+            this.lblKegunaanTambahInfoObat.Size = new System.Drawing.Size(66, 15);
+            this.lblKegunaanTambahInfoObat.TabIndex = 3;
+            this.lblKegunaanTambahInfoObat.Text = "Kegunaan :";
             // 
-            // lblObatHarga
+            // label5
             // 
-            this.lblObatHarga.AutoSize = true;
-            this.lblObatHarga.Location = new System.Drawing.Point(87, 307);
-            this.lblObatHarga.Name = "lblObatHarga";
-            this.lblObatHarga.Size = new System.Drawing.Size(48, 15);
-            this.lblObatHarga.TabIndex = 4;
-            this.lblObatHarga.Text = "Harga : ";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(56, 308);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 15);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Ukuran :";
             // 
-            // rtbObatKomposisi
+            // label6
             // 
-            this.rtbObatKomposisi.Location = new System.Drawing.Point(162, 175);
-            this.rtbObatKomposisi.Name = "rtbObatKomposisi";
-            this.rtbObatKomposisi.Size = new System.Drawing.Size(265, 63);
-            this.rtbObatKomposisi.TabIndex = 5;
-            this.rtbObatKomposisi.Text = "";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(56, 356);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 15);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Harga :";
             // 
-            // tbObatName
+            // tbNamaTambahInfoObat
             // 
-            this.tbObatName.Location = new System.Drawing.Point(162, 87);
-            this.tbObatName.Name = "tbObatName";
-            this.tbObatName.Size = new System.Drawing.Size(265, 23);
-            this.tbObatName.TabIndex = 6;
+            this.tbNamaTambahInfoObat.Location = new System.Drawing.Point(128, 28);
+            this.tbNamaTambahInfoObat.Name = "tbNamaTambahInfoObat";
+            this.tbNamaTambahInfoObat.Size = new System.Drawing.Size(304, 23);
+            this.tbNamaTambahInfoObat.TabIndex = 6;
             // 
-            // tbObatKegunaan
+            // rtbKomposisiTambahInfoObat
             // 
-            this.tbObatKegunaan.Location = new System.Drawing.Point(162, 261);
-            this.tbObatKegunaan.Name = "tbObatKegunaan";
-            this.tbObatKegunaan.Size = new System.Drawing.Size(265, 23);
-            this.tbObatKegunaan.TabIndex = 7;
+            this.rtbKomposisiTambahInfoObat.Location = new System.Drawing.Point(128, 115);
+            this.rtbKomposisiTambahInfoObat.Name = "rtbKomposisiTambahInfoObat";
+            this.rtbKomposisiTambahInfoObat.Size = new System.Drawing.Size(304, 76);
+            this.rtbKomposisiTambahInfoObat.TabIndex = 8;
+            this.rtbKomposisiTambahInfoObat.Text = "";
             // 
-            // tbObatHarga
+            // rtbKegunaanTambahInfoObat
             // 
-            this.tbObatHarga.Location = new System.Drawing.Point(162, 304);
-            this.tbObatHarga.Name = "tbObatHarga";
-            this.tbObatHarga.Size = new System.Drawing.Size(265, 23);
-            this.tbObatHarga.TabIndex = 8;
+            this.rtbKegunaanTambahInfoObat.Location = new System.Drawing.Point(128, 209);
+            this.rtbKegunaanTambahInfoObat.Name = "rtbKegunaanTambahInfoObat";
+            this.rtbKegunaanTambahInfoObat.Size = new System.Drawing.Size(304, 76);
+            this.rtbKegunaanTambahInfoObat.TabIndex = 9;
+            this.rtbKegunaanTambahInfoObat.Text = "";
             // 
-            // btnTambah
+            // tbUkuranTambahInfoObat
             // 
-            this.btnTambah.Location = new System.Drawing.Point(162, 350);
-            this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(75, 23);
-            this.btnTambah.TabIndex = 9;
-            this.btnTambah.Text = "Tambah";
-            this.btnTambah.UseVisualStyleBackColor = true;
-            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
+            this.tbUkuranTambahInfoObat.Location = new System.Drawing.Point(128, 308);
+            this.tbUkuranTambahInfoObat.Name = "tbUkuranTambahInfoObat";
+            this.tbUkuranTambahInfoObat.Size = new System.Drawing.Size(304, 23);
+            this.tbUkuranTambahInfoObat.TabIndex = 10;
             // 
-            // cbObatJenis
+            // tbHargaTambahInfoObat
             // 
-            this.cbObatJenis.FormattingEnabled = true;
-            this.cbObatJenis.Items.AddRange(new object[] {
+            this.tbHargaTambahInfoObat.Location = new System.Drawing.Point(128, 356);
+            this.tbHargaTambahInfoObat.Name = "tbHargaTambahInfoObat";
+            this.tbHargaTambahInfoObat.Size = new System.Drawing.Size(304, 23);
+            this.tbHargaTambahInfoObat.TabIndex = 11;
+            // 
+            // btnTambahTambahInfoObat
+            // 
+            this.btnTambahTambahInfoObat.BackgroundImage = global::Apotek_PBO.Properties.Resources.Untitled_1_01;
+            this.btnTambahTambahInfoObat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTambahTambahInfoObat.Location = new System.Drawing.Point(128, 400);
+            this.btnTambahTambahInfoObat.Name = "btnTambahTambahInfoObat";
+            this.btnTambahTambahInfoObat.Size = new System.Drawing.Size(75, 23);
+            this.btnTambahTambahInfoObat.TabIndex = 12;
+            this.btnTambahTambahInfoObat.Text = "Tambah";
+            this.btnTambahTambahInfoObat.UseVisualStyleBackColor = true;
+            this.btnTambahTambahInfoObat.Click += new System.EventHandler(this.btnTambahTambahInfoObat_Click);
+            // 
+            // btnBatalTambahInfoObat
+            // 
+            this.btnBatalTambahInfoObat.BackgroundImage = global::Apotek_PBO.Properties.Resources.Untitled_1_01;
+            this.btnBatalTambahInfoObat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBatalTambahInfoObat.Location = new System.Drawing.Point(357, 400);
+            this.btnBatalTambahInfoObat.Name = "btnBatalTambahInfoObat";
+            this.btnBatalTambahInfoObat.Size = new System.Drawing.Size(75, 23);
+            this.btnBatalTambahInfoObat.TabIndex = 13;
+            this.btnBatalTambahInfoObat.Text = "Batal";
+            this.btnBatalTambahInfoObat.UseVisualStyleBackColor = true;
+            this.btnBatalTambahInfoObat.Click += new System.EventHandler(this.btnTutupTambahInfoObat_Click);
+            // 
+            // cbJenisTambahInfoObat
+            // 
+            this.cbJenisTambahInfoObat.FormattingEnabled = true;
+            this.cbJenisTambahInfoObat.Items.AddRange(new object[] {
             "Tablet",
             "Pil",
             "Kapsul",
             "Kaplet",
-            "Larutan",
-            "Infusa",
-            "Salep",
-            "Obat Tetes"});
-            this.cbObatJenis.Location = new System.Drawing.Point(162, 132);
-            this.cbObatJenis.Name = "cbObatJenis";
-            this.cbObatJenis.Size = new System.Drawing.Size(265, 23);
-            this.cbObatJenis.TabIndex = 10;
+            "Sirup"});
+            this.cbJenisTambahInfoObat.Location = new System.Drawing.Point(128, 73);
+            this.cbJenisTambahInfoObat.Name = "cbJenisTambahInfoObat";
+            this.cbJenisTambahInfoObat.Size = new System.Drawing.Size(304, 23);
+            this.cbJenisTambahInfoObat.TabIndex = 14;
             // 
-            // FormTambahObat
+            // FormTambahInfoObat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbObatJenis);
-            this.Controls.Add(this.btnTambah);
-            this.Controls.Add(this.tbObatHarga);
-            this.Controls.Add(this.tbObatKegunaan);
-            this.Controls.Add(this.tbObatName);
-            this.Controls.Add(this.rtbObatKomposisi);
-            this.Controls.Add(this.lblObatHarga);
-            this.Controls.Add(this.lblObatJenis);
-            this.Controls.Add(this.lblObatKegunaan);
-            this.Controls.Add(this.lblObatKomposisi);
-            this.Controls.Add(this.lblObatName);
-            this.Name = "FormTambahObat";
-            this.Text = "Form2";
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(510, 443);
+            this.Controls.Add(this.cbJenisTambahInfoObat);
+            this.Controls.Add(this.btnBatalTambahInfoObat);
+            this.Controls.Add(this.btnTambahTambahInfoObat);
+            this.Controls.Add(this.tbHargaTambahInfoObat);
+            this.Controls.Add(this.tbUkuranTambahInfoObat);
+            this.Controls.Add(this.rtbKegunaanTambahInfoObat);
+            this.Controls.Add(this.rtbKomposisiTambahInfoObat);
+            this.Controls.Add(this.tbNamaTambahInfoObat);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblKegunaanTambahInfoObat);
+            this.Controls.Add(this.lblKomposisiTambahInfoObat);
+            this.Controls.Add(this.lblJenisTambahInfoObat);
+            this.Controls.Add(this.lblNamaTambahInfoObat);
+            this.Name = "FormTambahInfoObat";
+            this.Text = "FormTambahInfoObat";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,16 +203,19 @@ namespace Apotek_PBO
 
         #endregion
 
-        private System.Windows.Forms.Label lblObatName;
-        private System.Windows.Forms.Label lblObatKomposisi;
-        private System.Windows.Forms.Label lblObatKegunaan;
-        private System.Windows.Forms.Label lblObatJenis;
-        private System.Windows.Forms.Label lblObatHarga;
-        private System.Windows.Forms.RichTextBox rtbObatKomposisi;
-        private System.Windows.Forms.TextBox tbObatName;
-        private System.Windows.Forms.TextBox tbObatKegunaan;
-        private System.Windows.Forms.TextBox tbObatHarga;
-        private System.Windows.Forms.Button btnTambah;
-        private System.Windows.Forms.ComboBox cbObatJenis;
+        private System.Windows.Forms.Label lblNamaTambahInfoObat;
+        private System.Windows.Forms.Label lblJenisTambahInfoObat;
+        private System.Windows.Forms.Label lblKomposisiTambahInfoObat;
+        private System.Windows.Forms.Label lblKegunaanTambahInfoObat;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbNamaTambahInfoObat;
+        private System.Windows.Forms.RichTextBox rtbKomposisiTambahInfoObat;
+        private System.Windows.Forms.RichTextBox rtbKegunaanTambahInfoObat;
+        private System.Windows.Forms.TextBox tbUkuranTambahInfoObat;
+        private System.Windows.Forms.TextBox tbHargaTambahInfoObat;
+        private System.Windows.Forms.Button btnTambahTambahInfoObat;
+        private System.Windows.Forms.Button btnBatalTambahInfoObat;
+        private System.Windows.Forms.ComboBox cbJenisTambahInfoObat;
     }
 }

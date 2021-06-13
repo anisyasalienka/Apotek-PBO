@@ -1,21 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Apotek_PBO.Models;
 
 namespace Apotek_PBO
 {
     class User
     {
-        private int _userID;
+        LogIn model = new LogIn();
         private string _userName;
         private string _password;
+        private string _type;
 
-        public int UserID
-        {
-            get { return _userID; }
-        }
         public string UserName
         {
             get { return _userName; }
@@ -26,23 +21,53 @@ namespace Apotek_PBO
             get { return _password; }
             set { _password = value; }
         }
+        public string Type
+        {
+            get { return _type; }
+            set { _type = value; }
+        }
         public User() { }
         public User(string userName, string password)
         {
             UserName = userName;
             Password = password;
         }
-        public Boolean Login(string userName, string password)
+        public Boolean Login()
         {
-            if (userName == "User" & password == "User")
+            bool b = false;
+            using (var db = new DBMedStorageContext())
             {
-                _userID = 1;
-                return true;
+                var query = from LogIn in db.LogIns where LogIn.Username == UserName && LogIn.Password == Password select LogIn;
+                if(query != null)
+                {
+                    foreach(var item in query)
+                    {
+                        if(item.Type == "user")
+                        {
+                            b = true;
+                        }
+                    }
+                    
+                }
             }
-            else
+            return b;
+        }
+        public Boolean tambahAkun(string type)
+        {
+            bool b = false;
+            if (UserName != "" && Password != "")
             {
-                return false;
+                model.Username = UserName;
+                model.Password = Password;
+                model.Type = type;
+                using (var db = new DBMedStorageContext())
+                {
+                    db.LogIns.Add(model);
+                    db.SaveChanges();
+                    b = true;
+                }
             }
+            return b;
         }
     }
 }

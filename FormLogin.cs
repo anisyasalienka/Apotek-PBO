@@ -17,28 +17,32 @@ namespace Apotek_PBO
             InitializeComponent();
         }
 
-        private void btnCLose_Click(object sender, EventArgs e)
+        private void btnTutupFormLogin_Click(object sender, EventArgs e)
         {
             this.Close();
+            Environment.Exit(1);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             UserPremium user = new UserPremium(tbUsername.Text,tbPassword.Text);
 
-            if(user.Login(user.UserName, user.Password))
+            if(user.Login())
             {
-                //MessageBox.Show("Login Berhasil, ID anda adalah " + user.UserID.ToString());
-                FormInformasiObat form3 = new FormInformasiObat();
-                form3.Show();
+                this.Hide();
+                FormMainMenu formMain = new FormMainMenu();
+                formMain.Akun("admin");
+                formMain.Show();
             }
             else
             {
                 User user1 = new User(tbUsername.Text, tbPassword.Text);
-                if(user1.Login(user1.UserName, user1.Password))
+                if(user1.Login())
                 {
-                    FormUser formUser = new FormUser();
-                    formUser.Show();
+                    this.Hide();
+                    FormMainMenu formMain = new FormMainMenu();
+                    formMain.Akun("user");
+                    formMain.Show();
 
                 }
                 else
@@ -46,6 +50,12 @@ namespace Apotek_PBO
                     MessageBox.Show("Login Gagal");
                 }
             }
+        }
+
+        private void btnSignin_Click(object sender, EventArgs e)
+        {
+            FormSignUp formSignUp = new FormSignUp();
+            formSignUp.Show();
         }
     }
 }
