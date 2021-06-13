@@ -42,7 +42,7 @@ namespace Apotek_PBO
             bool b = false;
             using(var db = new DBMedStorageContext())
             {
-                var result = db.InformasiObats.SingleOrDefault(info => info.ObatNama == ObatName);
+                var result = db.InformasiObats.SingleOrDefault(info => info.ObatNama == ObatName && info.ObatUkuran == ObatUkuran);
                 if(result != null)
                 {
                     if(ObatName != "" && ObatJenis != "" && ObatHarga != 0)

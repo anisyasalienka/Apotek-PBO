@@ -32,7 +32,7 @@ namespace Apotek_PBO
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            if(tbPassword.Text == tbUlangPassword.Text)
+            if(tbPassword.Text == tbUlangPassword.Text && tbPassword.Text != "" && tbUlangPassword.Text != "" && tbUsername.Text != "")
             {
                 if (this.rbAdmin.Checked)
                 {
@@ -44,7 +44,7 @@ namespace Apotek_PBO
                     }
                     else
                     {
-                        MessageBox.Show("Gagal ditambahkan ! Isi username dan password !");
+                        MessageBox.Show("Gagal ditambahkan ! ");
                     }
                 }
                 else if (this.rbUser.Checked)
@@ -57,13 +57,13 @@ namespace Apotek_PBO
                     }
                     else
                     {
-                        MessageBox.Show("Gagal ditambahkan ! Isi username dan password !");
+                        MessageBox.Show("Gagal ditambahkan ! ");
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Password yang diulang salah !");
+                MessageBox.Show("Gagal ditambahkan !");
             }
 
         }

@@ -84,7 +84,7 @@ namespace Apotek_PBO
         {
             using (var db = new DBMedStorageContext())
             {
-                db.InformasiObats.RemoveRange(db.InformasiObats.Where(item => item.ObatNama == lblNamaObatInfoObat.Text));
+                db.InformasiObats.RemoveRange(db.InformasiObats.Where(item => item.ObatNama == lblNamaObatInfoObat.Text && item.ObatUkuran == lblUkuranObatInfoObat.Text));
                 db.SaveChanges();
                 lblNamaObatInfoObat.Text = "-";
                 lblJenisObatInfoObat.Text = "-";

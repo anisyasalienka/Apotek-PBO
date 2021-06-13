@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Apotek_PBO.Models;
-using ClosedXML.Excel;
 
 namespace Apotek_PBO
 {

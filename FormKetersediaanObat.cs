@@ -70,7 +70,7 @@ namespace Apotek_PBO
         {
             using (var db = new DBMedStorageContext())
             {
-                db.KetersediaanObats.RemoveRange(db.KetersediaanObats.Where(item => item.ReadyNama == lblNamaObatKetersediaanObat.Text));
+                db.KetersediaanObats.RemoveRange(db.KetersediaanObats.Where(item => item.ReadyNama == lblNamaObatKetersediaanObat.Text && item.ReadyUkuran == lblUkuranObatKetersediaanObat.Text));
                 db.SaveChanges();
                 lblNamaObatKetersediaanObat.Text = "-";
                 lblJumlahObatKetersediaanObat.Text = "-";
